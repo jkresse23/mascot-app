@@ -1,4 +1,4 @@
-const CACHE_NAME = "mascot-app-v1";
+const CACHE_NAME = "mascot-app-v2";
 const APP_ASSETS = [
   "./",
   "./index.html",

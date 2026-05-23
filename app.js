@@ -721,6 +721,170 @@ const cards = [
   }
 ];
 
+function makeHardClues(team, initials, colors, clues) {
+  return clues.map(([clue, explanation]) => ({
+    team,
+    initials,
+    colors,
+    difficulty: "hard",
+    clue,
+    explanation
+  }));
+}
+
+cards.push(
+  ...makeHardClues("Atlanta Hawks", "ATL", ["#E03A3E", "#26282A"], [
+    ["This team could be named after a hunter with feathers instead of shoes.", "Hawks are birds of prey that hunt from the sky."],
+    ["This team might perch on a tall branch before diving down fast.", "Hawks often perch high before swooping after food."],
+    ["This team has a name that belongs to a sky scout with super-sharp eyes.", "Hawks are famous for spotting tiny things from far away."]
+  ]),
+  ...makeHardClues("Boston Celtics", "BOS", ["#007A33", "#BA9653"], [
+    ["This team sounds like a group whose name starts with a silent-looking C.", "Celtics starts with C but is pronounced with a K sound."],
+    ["This team could make you think of green, gold, and old legends from across the ocean.", "The Celtics connect to Irish-inspired colors and Celtic history."],
+    ["This team name belongs more to ancient people than to an animal mascot.", "Celtic refers to historic cultures, not a creature."]
+  ]),
+  ...makeHardClues("Brooklyn Nets", "BKN", ["#000000", "#777777"], [
+    ["This team is the only answer you want the ball to touch after a perfect shot.", "A perfect basketball shot drops through the net."],
+    ["This team can be tied in knots but still helps count a basket.", "Basketball nets are made from knotted cord."],
+    ["This team hangs below the rim and wiggles when the shot is clean.", "The net moves when a made shot passes through it."]
+  ]),
+  ...makeHardClues("Charlotte Hornets", "CHA", ["#1D1160", "#00788C"], [
+    ["This team might warn you with a buzz before using its pointy defense.", "Hornets buzz and can sting to defend themselves."],
+    ["This team is tiny compared with a player, but nobody wants it in their jersey.", "A hornet is small, but its sting can hurt."],
+    ["This team sounds like a flying insect that brings its own striped uniform.", "Hornets often have striped bodies."]
+  ]),
+  ...makeHardClues("Chicago Bulls", "CHI", ["#CE1141", "#000000"], [
+    ["This team could leave hoofprints after storming across a field.", "Bulls have hooves and are powerful runners."],
+    ["This team is not a cow, but it belongs in the same barnyard family.", "A bull is a male cattle animal."],
+    ["This team might lower its head before charging forward.", "Bulls are often shown charging with their horns down."]
+  ]),
+  ...makeHardClues("Cleveland Cavaliers", "CLE", ["#860038", "#FDBB30"], [
+    ["This team sounds like someone from an old adventure who is bold almost to a fault.", "Cavalier can mean daring or bold."],
+    ["This team might look ready for a duel in a storybook courtyard.", "Cavaliers are often imagined as old-fashioned sword-carrying figures."],
+    ["This team name feels fancy, brave, and a little bit royal.", "Cavaliers have a noble, old-world feeling."]
+  ]),
+  ...makeHardClues("Dallas Mavericks", "DAL", ["#00538C", "#B8C4CA"], [
+    ["This team is the one that refuses to follow the herd.", "A maverick is independent and does things differently."],
+    ["This team could be a lone rider choosing its own trail.", "Maverick has a Western, independent meaning."],
+    ["This team is not just a horse clue; it is a clue about independence.", "Maverick means someone who thinks or acts independently."]
+  ]),
+  ...makeHardClues("Denver Nuggets", "DEN", ["#0E2240", "#FEC524"], [
+    ["This team might be found in a miner's pan after a lucky shake.", "Gold nuggets can be found during mining or panning."],
+    ["This team is a small treasure that does not need a treasure chest.", "A nugget can be a small piece of valuable gold."],
+    ["This team sounds like mountain treasure small enough to hold in your hand.", "Gold nuggets are small pieces of gold tied to mining regions."]
+  ]),
+  ...makeHardClues("Detroit Pistons", "DET", ["#C8102E", "#1D42BA"], [
+    ["This team moves up and down but helps something move forward.", "Pistons move inside engines to create power."],
+    ["This team is hidden under the hood, not sitting in the driver's seat.", "Pistons are engine parts inside cars."],
+    ["This team turns engine power into a name that fits Motor City.", "Detroit is known as Motor City, and pistons are engine parts."]
+  ]),
+  ...makeHardClues("Golden State Warriors", "GSW", ["#1D428A", "#FFC72C"], [
+    ["This team sounds like someone brave enough to guard a castle gate.", "Warriors are brave fighters in stories and history."],
+    ["This team could trade a sword for a jump shot.", "A warrior is a fighter, while this team plays basketball."],
+    ["This team name is about courage before it is about any one animal.", "Warrior describes a brave fighter."]
+  ]),
+  ...makeHardClues("Houston Rockets", "HOU", ["#CE1141", "#000000"], [
+    ["This team could leave Earth before the defense even turns around.", "Rockets launch upward into space very quickly."],
+    ["This team needs fuel, fire, and a very serious countdown.", "Rockets use fuel and launch after countdowns."],
+    ["This team points upward from a city that says, Houston, we have a mission.", "Houston is closely linked with space missions."]
+  ]),
+  ...makeHardClues("Indiana Pacers", "IND", ["#002D62", "#FDBB30"], [
+    ["This team might not win the race, but it helps everyone know the speed.", "A pacer sets the pace for others."],
+    ["This team could be connected to the car that leads the first lap.", "A pace car leads race cars at controlled speed."],
+    ["This team name is about rhythm and speed, not an animal or weather.", "Pacers are tied to setting pace."]
+  ]),
+  ...makeHardClues("LA Clippers", "LAC", ["#C8102E", "#1D428A"], [
+    ["This team has a name that once meant speed before engines ruled travel.", "Clipper ships were fast sailing ships."],
+    ["This team could cross the ocean with canvas wings.", "Clipper ships used large sails to move quickly."],
+    ["This team belongs to sea history, even though it plays in Los Angeles.", "The Clippers name refers to sailing ships."]
+  ]),
+  ...makeHardClues("Los Angeles Lakers", "LAL", ["#552583", "#FDB927"], [
+    ["This team has a watery name in a city famous for sunshine and movies.", "The Lakers play in Los Angeles, but the name points to lakes."],
+    ["This team name makes more sense if you travel back to Minnesota.", "The Lakers originally came from Minnesota."],
+    ["This team sounds like it should live near canoes more than palm trees.", "Lakes are associated with boats and canoes, unlike Los Angeles beaches."]
+  ]),
+  ...makeHardClues("Memphis Grizzlies", "MEM", ["#5D76A9", "#12173F"], [
+    ["This team might scratch a tree just to say, I was here.", "Bears can mark trees with claws."],
+    ["This team could nap through winter and still wake up hungry.", "Bears are known for winter hibernation."],
+    ["This team is a heavyweight forest clue with claws instead of sneakers.", "Grizzlies are large bears with strong claws."]
+  ]),
+  ...makeHardClues("Miami Heat", "MIA", ["#98002E", "#F9A01B"], [
+    ["This team is invisible, but you can feel it rising from pavement.", "Heat can shimmer above hot pavement even though you cannot grab it."],
+    ["This team can turn a sidewalk into a no-bare-feet zone.", "Very hot pavement can hurt bare feet."],
+    ["This team is what makes shade feel like a prize in South Florida.", "Miami's warm climate makes shade feel valuable."]
+  ]),
+  ...makeHardClues("Milwaukee Bucks", "MIL", ["#00471B", "#EEE1C6"], [
+    ["This team could quietly step through the woods wearing a crown made of antlers.", "A buck is a male deer with antlers."],
+    ["This team might freeze in place if headlights surprised it at night.", "Deer are known for stopping when caught in headlights."],
+    ["This team grows its pointy headgear instead of buying it.", "Bucks grow antlers naturally."]
+  ]),
+  ...makeHardClues("Minnesota Timberwolves", "MIN", ["#0C2340", "#78BE20"], [
+    ["This team could answer a full moon with a chorus.", "Wolves often howl, and packs can howl together."],
+    ["This team hunts with teammates before basketball even starts.", "Timberwolves live and hunt in packs."],
+    ["This team sounds like the forest version of a nighttime howl.", "Timberwolves are wolves associated with wooded areas."]
+  ]),
+  ...makeHardClues("New Orleans Pelicans", "NOP", ["#0C2340", "#C8102E"], [
+    ["This team brings a fishing net right under its beak.", "Pelicans use a pouch under the beak to scoop fish."],
+    ["This team could dive toward the water and come up with dinner.", "Pelicans catch fish from the water."],
+    ["This team has a bird clue with a beak that works like a grocery bag.", "A pelican's pouch can hold fish."]
+  ]),
+  ...makeHardClues("New York Knicks", "NYK", ["#006BB6", "#F58426"], [
+    ["This team is hiding an old clothing word inside a short nickname.", "Knicks is short for Knickerbockers, an old clothing term."],
+    ["This team sounds like New York history stitched into a pair of pants.", "Knickerbockers are old-fashioned pants tied to New York history."],
+    ["This team is one of the trickiest because the clue is fashion, not a mascot.", "The Knicks name comes from Knickerbockers, not an animal."]
+  ]),
+  ...makeHardClues("Oklahoma City Thunder", "OKC", ["#007AC1", "#EF3B24"], [
+    ["This team can shake windows without ever touching them.", "Thunder is a loud sound that can rumble through windows."],
+    ["This team is the sky's drumroll after lightning flashes.", "Thunder often follows lightning like a booming sound."],
+    ["This team arrives with a boom, but you cannot put it in your hand.", "Thunder is sound, not a physical object."]
+  ]),
+  ...makeHardClues("Orlando Magic", "ORL", ["#0077C0", "#C4CED4"], [
+    ["This team could make a coin vanish before halftime.", "Magic tricks often make objects seem to disappear."],
+    ["This team belongs to a city where make-believe is part of the map.", "Orlando is known for theme parks and fantasy experiences."],
+    ["This team might say a spell instead of calling a play.", "Wizards and magicians use spells in stories."]
+  ]),
+  ...makeHardClues("Philadelphia 76ers", "PHI", ["#006BB6", "#ED174C"], [
+    ["This team is a number clue wearing red, white, and blue history.", "The 76ers name points to 1776 and American history."],
+    ["This team points to the last two digits of America's big birthday year.", "The United States declared independence in 1776."],
+    ["This team is a history quiz hiding inside a basketball name.", "The 76ers name is based on a historic year, not a mascot."]
+  ]),
+  ...makeHardClues("Phoenix Suns", "PHX", ["#1D1160", "#E56020"], [
+    ["This team can make a car seat feel too hot before practice.", "The sun can heat surfaces like car seats."],
+    ["This team is about the star that makes desert afternoons extra bright.", "The sun is a star, and Phoenix has a desert climate."],
+    ["This team can paint the sky orange before it disappears for the night.", "The sun can make colorful sunsets."]
+  ]),
+  ...makeHardClues("Portland Trail Blazers", "POR", ["#E03A3E", "#000000"], [
+    ["This team might be first through the woods so everyone else can follow.", "Trail blazers create paths for others."],
+    ["This team is about making a route, not just walking on one.", "A trail blazer leads or creates a new path."],
+    ["This team sounds like a pioneer with sneakers.", "A trail blazer is a pioneer or leader."]
+  ]),
+  ...makeHardClues("Sacramento Kings", "SAC", ["#5A2D81", "#63727A"], [
+    ["This team could be checked but hopes never to be checkmated.", "The king is the main piece in chess."],
+    ["This team might make a royal decree before tipoff.", "Kings are rulers who can issue decrees in stories."],
+    ["This team wears the crown in both castles and card decks.", "Kings appear in royalty stories and playing cards."]
+  ]),
+  ...makeHardClues("San Antonio Spurs", "SAS", ["#000000", "#C4CED4"], [
+    ["This team is the star-shaped piece near a cowboy boot heel.", "Spurs often have a small rowel near the heel."],
+    ["This team has a Western clue that spins but is not a wagon wheel.", "Some spurs have a little spinning wheel shape."],
+    ["This team belongs with saddles, boots, and a Texas trail.", "Spurs are associated with riding gear and cowboy imagery."]
+  ]),
+  ...makeHardClues("Toronto Raptors", "TOR", ["#CE1141", "#000000"], [
+    ["This team has a name that can mean ancient claws or modern wings.", "Raptor can refer to dinosaurs or birds of prey."],
+    ["This team might leave three-toed footprints in a movie jungle.", "Dinosaur raptors are often shown with clawed feet."],
+    ["This team is a prehistoric clue that got popular with movie fans.", "Raptors became famous in dinosaur movies."]
+  ]),
+  ...makeHardClues("Utah Jazz", "UTA", ["#002B5C", "#F9A01B"], [
+    ["This team might make up the next notes as it plays them.", "Jazz often includes improvisation."],
+    ["This team is a music clue that moved away from its original city.", "The Jazz name came from New Orleans before the team moved to Utah."],
+    ["This team could be guessed from a saxophone solo with no sheet music.", "Jazz music often features improvised solos."]
+  ]),
+  ...makeHardClues("Washington Wizards", "WAS", ["#002B5C", "#E31837"], [
+    ["This team might turn a basketball into a pumpkin if the spell goes sideways.", "Wizards are magical story characters who cast spells."],
+    ["This team could keep its best plays in a spellbook.", "Storybook wizards often use spellbooks."],
+    ["This team is a magic clue with robes, staffs, and secret words.", "Wizards are often shown with robes, staffs, and spells."]
+  ])
+);
+
 const state = {
   filter: "all",
   deck: [],
