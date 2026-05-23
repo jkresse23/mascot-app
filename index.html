@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#174a7c" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Mascot App" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta
+      name="description"
+      content="A kid-friendly NBA mascot clue game for quick family quizzes."
+    />
+    <title>Mascot App</title>
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="icons/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icons/icon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="app-header">
+        <div>
+          <p class="eyebrow">NBA mascot quiz</p>
+          <h1>Mascot App</h1>
+        </div>
+        <button class="icon-button" id="shuffleButton" type="button" aria-label="Shuffle deck">
+          ↻
+        </button>
+      </header>
+
+      <section class="scoreboard" aria-label="Card status">
+        <span id="progressText">1 of 90</span>
+        <span id="difficultyText">Easy</span>
+      </section>
+
+      <button class="card" id="card" type="button" aria-live="polite">
+        <span class="card-label" id="cardLabel">Clue</span>
+        <span class="team-badge" id="teamBadge" aria-hidden="true">?</span>
+        <span class="clue-text" id="clueText"></span>
+        <span class="answer-text" id="answerText"></span>
+        <span class="explanation-text" id="explanationText"></span>
+      </button>
+
+      <div class="controls">
+        <button class="secondary-button" id="revealButton" type="button">Reveal</button>
+        <button class="primary-button" id="nextButton" type="button">Next clue</button>
+      </div>
+
+      <nav class="difficulty-filter" aria-label="Difficulty filter">
+        <button class="filter-button active" data-filter="all" type="button">All</button>
+        <button class="filter-button" data-filter="easy" type="button">Easy</button>
+        <button class="filter-button" data-filter="medium" type="button">Medium</button>
+        <button class="filter-button" data-filter="hard" type="button">Hard</button>
+      </nav>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "Mascot App",
+  "short_name": "Mascot",
+  "description": "A kid-friendly NBA mascot clue game for quick family quizzes.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f8efe2",
+  "theme_color": "#174a7c",
+  "icons": [
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
